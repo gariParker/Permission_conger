@@ -1,0 +1,85 @@
+.button{
+    -fx-background-color: #ffda46;
+    -fx-background-radius: 30 0 0 30;
+    -fx-opacity: 0.8;
+    -fx-font-family: Bell MT 20px;
+}
+
+.button:hover
+{
+    -fx-background-color: #27669e;
+    -fx-background-radius: 30 0 0 30;
+    -fx-border-radius: 30 0 0 30;
+     -fx-border-color: #ffffff;
+     -fx-text-fill: white;
+}
+
+.Apropos{
+        -fx-background-color: #ffda46;
+        -fx-background-radius: 30 30 0 0;
+        -fx-opacity: 0.8;
+        -fx-font-family: Bell MT 20px;
+}
+.Apropos:hover{
+        -fx-background-color: #ffda46;
+        -fx-background-radius: 30 30 0 0;
+        -fx-opacity: 0.8;
+        -fx-font-family: Bell MT 20px;
+}
+.Apropos:pressed{
+        -fx-background-color: #ffda46;
+        -fx-background-radius: 30 30 0 0;
+        -fx-opacity: 0.8;
+        -fx-font-family: Bell MT 20px;
+}
+
+.button:pressed
+{
+    -fx-background-color: #e8afaf;
+    -fx-background-radius: 30 0 0 30;
+    -fx-text-fill: white;
+}
+
+.BtnSeConnect{
+    -fx-background-color:  #a12222;
+    -fx-background-radius: 30 30 30 30;
+}
+.BtnSeConnect:hover
+{
+    -fx-background-color: #27669e;
+    -fx-background-radius: 30 30 30 30;
+    -fx-border-color: #ffffff;
+}
+.BtnSeConnect:pressed
+{
+    -fx-background-color:  #6b1515;
+    -fx-background-radius: 30 30 30 30;
+}
+
+//Fond
+.ArriereImage{
+    -fx-background-image:url('Fond.jpg');
+    -fx-background-size: 100% 100%; /* Pour que l'image de fond couvre entièrement la taille de la Pane */
+    -fx-background-repeat: no-repeat; /* Pour empêcher l'image de fond de se répéter */
+}
+//css pour la majorité des bouttons
+.StyleStandartBoutton{
+            -fx-background-color:  #0D293E;
+            -fx-background-radius: 30 30 30 30;
+
+}
+.StyleStandartBoutton:hover
+{
+            -fx-background-color: #27669e;
+            -fx-background-radius: 30 30 30 30;
+            -fx-border-radius: 20px;
+            -fx-border-color: #ffffff;
+}
+.StyleStandartBoutton:pressed{
+             -fx-background-color:  #6b1515;
+             -fx-background-radius: 30 30 30 30;
+              -fx-border-radius: 20px;
+              -fx-border-color: #ffffff;
+ }
+
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myfirstinterface.FormLoginController">
+   <left>
+      <AnchorPane prefHeight="502.0" prefWidth="413.0" style="-fx-background-color: #a12222;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="140.0" layoutY="133.0" prefHeight="44.0" prefWidth="150.0" text="GESTION" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="195.0" prefHeight="44.0" prefWidth="61.0" text="DES" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="143.0" layoutY="252.0" prefHeight="44.0" prefWidth="143.0" text="CONGES" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="317.0" prefHeight="44.0" prefWidth="46.0" text="ET" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="110.0" layoutY="422.0" prefHeight="44.0" prefWidth="195.0" text="PERMISSIONS" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="167.0" layoutY="369.0" prefHeight="44.0" prefWidth="69.0" text="DES" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="102.0" fitWidth="125.0" layoutX="145.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logofmc.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane fx:id="pane1" prefHeight="549.0" prefWidth="424.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textFieldNomUtilisateur" layoutX="119.0" layoutY="228.0" prefHeight="31.0" prefWidth="216.0" promptText="Nom Utilisateur" style="-fx-background-color: transparent; -fx-border-color: #a12222; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="passwordFieldMotDePasse" layoutX="119.0" layoutY="313.0" prefHeight="31.0" prefWidth="215.0" promptText="Mot de passe" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #a12222;" />
+            <Button fx:id="BtnSeConnect" layoutX="144.0" layoutY="421.0" mnemonicParsing="false" onAction="#ActionPourConnecter" prefHeight="45.0" prefWidth="165.0" styleClass="BtnSeConnect" stylesheets="@style.css" text="Se Connecter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Button>
+            <Hyperlink layoutX="148.0" layoutY="510.0" text="Mot de passe oublié" />
+            <Label layoutX="79.0" layoutY="14.0" prefHeight="44.0" prefWidth="282.0" text="AUTHENTIFICATION" textFill="#862c0b">
+               <font>
+                  <Font name="Bell MT" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="111.0" fitWidth="131.0" layoutX="165.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_people2_48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="45.0" layoutX="48.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_female_user_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="53.0" layoutX="47.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_lock_32.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

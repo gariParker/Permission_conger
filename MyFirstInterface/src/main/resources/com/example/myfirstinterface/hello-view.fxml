@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1180.0" styleClass="ArriereImage" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myfirstinterface.HelloController">
+   <children>
+      <VBox prefHeight="710.0" prefWidth="253.0" style="-fx-background-color: #059056;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane opacity="0.83" prefHeight="710.0" prefWidth="269.0" style="-fx-background-color: #b22a2a;">
+               <children>
+                  <Button layoutX="22.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnActionListEmployes" prefHeight="36.0" prefWidth="214.0" stylesheets="@style.css" text="Liste des Employés" textFill="#681717">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="18.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnActionConger" prefHeight="36.0" prefWidth="221.0" stylesheets="@style.css" text="Congés" textFill="#6b1515">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="18.0" layoutY="370.0" mnemonicParsing="false" onAction="#btnActionPermissions" prefHeight="36.0" prefWidth="221.0" stylesheets="@style.css" text="Permissions" textFill="#6b1515">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font></Button>
+                  <Button layoutX="18.0" layoutY="458.0" mnemonicParsing="false" onAction="#BtnCongesSabhatique" prefHeight="36.0" prefWidth="221.0" stylesheets="@style.css" text="Congés SAB" textFill="#6b1515">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="BoutonDeconnecter" layoutX="18.0" layoutY="640.0" mnemonicParsing="false" onAction="#BtnActionDeconnecter" prefHeight="36.0" prefWidth="221.0" stylesheets="@style.css" text="Deconnexion" textFill="RED">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="6.0" layoutY="7.0" prefHeight="179.0" prefWidth="245.0" style="-fx-background-color: #b22a2a;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="187.0" layoutX="52.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logofmc.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Button fx:id="bouttonApropos" layoutX="-42.0" layoutY="557.0" mnemonicParsing="false" onAction="#bouttonApropos_Click" prefHeight="27.0" prefWidth="108.0" rotate="90.0" style="-fx-background-color: #6b1515;" styleClass="Apropos" stylesheets="@style.css" text="A propos" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Pane fx:id="menamena" layoutX="251.0" opacity="0.92" prefHeight="710.0" prefWidth="878.0" style="-fx-background-color: #6b1515;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="TableListEmployes" layoutX="13.0" layoutY="213.0" prefHeight="442.0" prefWidth="852.0" styleClass="my-table-view" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="ColIDEmployes" prefWidth="139.0" text="#ID" />
+                  <TableColumn fx:id="ColNOMemployes" prefWidth="153.0" text="Nom" />
+                  <TableColumn fx:id="ColPRENOMemployes" prefWidth="209.0" text="Prénom(s)" />
+                  <TableColumn fx:id="ColFONCTIONemployes" prefWidth="200.0" text="Fonction" />
+                  <TableColumn fx:id="ColTELEPHONEemployes" prefWidth="150.0" text="Téléphone" />
+              </columns>
+            </TableView>
+            <Button fx:id="BtnCongerEmpl" layoutX="597.0" layoutY="664.0" mnemonicParsing="false" onAction="#BtnCongerEmpl_click" prefHeight="39.0" prefWidth="166.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Congé" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="BtnPermission" layoutX="119.0" layoutY="664.0" mnemonicParsing="false" onAction="#BtnPermission_click" prefHeight="40.0" prefWidth="160.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Permission" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <TextField fx:id="RechercheChaqueEmployes" layoutX="56.0" layoutY="152.0" onAction="#TextRechercherPermis_click" prefHeight="36.0" prefWidth="339.0" promptText="Rechercher......" />
+            <ImageView fx:id="ImageEmpl" fitHeight="150.0" fitWidth="200.0" layoutX="635.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_female_user_32.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelquiVarieeListe" layoutX="42.0" layoutY="57.0" text="Liste des Employés" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="43.0" />
+               </font>
+            </Label>
+            <Pane fx:id="paneconger" prefHeight="710.0" prefWidth="930.0" style="-fx-background-color: #6b1515;">
+               <children>
+                  <Label layoutX="50.0" layoutY="38.0" text="Gestion des Congés" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="46.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableViewConges" layoutX="4.0" layoutY="166.0" prefHeight="481.0" prefWidth="924.0">
+                     <columns>
+                        <TableColumn fx:id="IdCongeTab" prefWidth="55.0" text="#ID" />
+                        <TableColumn fx:id="DateDebTab" prefWidth="103.0" text="Date" />
+                        <TableColumn fx:id="NomCongeTab" prefWidth="92.0" text="Noms" />
+                        <TableColumn fx:id="PrenomCongeTab" prefWidth="92.0" text="Prénom(s)" />
+                        <TableColumn fx:id="FonctionTab" prefWidth="117.0" text="Fonction" />
+                        <TableColumn fx:id="PhoneTab" prefWidth="119.0" text="Téléphone" />
+                        <TableColumn fx:id="DateRetourTab" prefWidth="159.0" text="Date de Retour" />
+                        <TableColumn fx:id="NbrJourTab" prefWidth="69.0" text="Nbr Jour" />
+                        <TableColumn fx:id="SoldeTab" prefWidth="75.0" text="Solde congé" />
+                        <TableColumn fx:id="ExeptionTab" prefWidth="75.0" text="Exception" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="BtnModifieConger" layoutX="644.0" layoutY="664.0" mnemonicParsing="false" onAction="#BtnModifieConger_click" prefHeight="39.0" prefWidth="154.0" style="-fx-background-radius: 0px 20px 20px 0px; -fx-border-radius: 0px 20px 20px 0px;" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BtnSupprConger" layoutX="476.0" layoutY="664.0" mnemonicParsing="false" onAction="#BtnSupprConger_click" prefHeight="39.0" prefWidth="154.0" style="-fx-background-radius: 20px 0px 0px 20px; -fx-border-radius: 20px 0px 0px 20px;" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BtnImprimerConger" layoutX="115.0" layoutY="664.0" mnemonicParsing="false" onAction="#FonctionImpressionCongerTsotra" prefHeight="39.0" prefWidth="154.0" style="-fx-background-radius: 20px 0px 0px 20px; -fx-border-radius: 20px 0px 0px 20px;" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Imprimer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="ImageSimpleConge" fitHeight="140.0" fitWidth="200.0" layoutX="750.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_female_user_32.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="RechercheCongerText" layoutX="10.0" layoutY="121.0" onAction="#RechercheCongerText_click" prefHeight="27.0" prefWidth="266.0" promptText="Rechercher" />
+                  <Pane fx:id="PanelCongerEmpl" layoutX="-1.0" layoutY="-2.0" prefHeight="710.0" prefWidth="930.0" style="-fx-background-color: #6b1515;">
+                     <children>
+                        <Label fx:id="labelquiVarie" layoutX="89.0" layoutY="57.0" text="Gestion du congé" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT" size="43.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="BtnValiderConger" layoutX="642.0" layoutY="624.0" mnemonicParsing="false" onAction="#BtnValiderConger_click" prefHeight="39.0" prefWidth="166.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Valider" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="IDText" disable="true" layoutX="158.0" layoutY="313.0" prefHeight="36.0" prefWidth="221.0" promptText="ID ..." />
+                        <TextField fx:id="FontionText" disable="true" layoutX="158.0" layoutY="486.0" prefHeight="36.0" prefWidth="221.0" promptText="Fonction ..." />
+                        <TextField fx:id="PhoneText" disable="true" layoutX="614.0" layoutY="313.0" prefHeight="36.0" prefWidth="221.0" promptText="Téléphone ...." />
+                        <TextField fx:id="NomText" disable="true" layoutX="158.0" layoutY="397.0" prefHeight="36.0" prefWidth="221.0" promptText="NOM ..." />
+                        <DatePicker fx:id="DateCongeText" layoutX="614.0" layoutY="397.0" onAction="#DateCongeText_click" prefHeight="36.0" prefWidth="221.0" promptText="Date de congée" />
+                        <DatePicker fx:id="DateFinText" layoutX="614.0" layoutY="486.0" onAction="#DateFinText_click" prefHeight="36.0" prefWidth="221.0" promptText="Date du retour" />
+                        <ImageView fx:id="ImageEmployerConge" fitHeight="150.0" fitWidth="200.0" layoutX="629.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8_female_user_32.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="52.0" layoutY="318.0" text=" ID : " textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="475.0" layoutY="318.0" text="Téléphone :" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="402.0" text="Nom :" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="491.0" text="Fonction :" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="575.0" text="Exception :" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="475.0" layoutY="402.0" text="Date congée :" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="475.0" layoutY="491.0" text="Fin du congée :" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="475.0" layoutY="557.0" text="Autre Exception " textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="-43.0" layoutY="180.0" rotate="90.0" style="-fx-background-color: #ffda46; -fx-padding: 2px 20px 2px 20px;" text="PROFILE" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="PrenomTextLab" layoutX="145.0" layoutY="171.0" text="Marion Brunel" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT Italic" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="99.0" layoutY="179.0" text="=&gt;" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="232.0" layoutY="630.0" text="Nombre du jours :" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="NbrJour" layoutX="410.0" layoutY="630.0" text="00" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="BtnDemiJour" layoutX="158.0" layoutY="657.0" mnemonicParsing="false" onAction="#BtnDemiJour_click" prefHeight="39.0" prefWidth="214.0" style="-fx-background-color: #000000;" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Demi-journée" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="ExceptionCongerAutoriser" layoutX="158.0" layoutY="568.0" prefHeight="36.0" prefWidth="221.0" promptText="Exception....." />
+                        <TextField fx:id="ExceptionAutre" disable="true" layoutX="614.0" layoutY="549.0" prefHeight="36.0" prefWidth="221.0" promptText="Exception .." />
+                        <Pane fx:id="PanePermissionListe" layoutY="1.0" prefHeight="710.0" prefWidth="930.0" style="-fx-background-color: #6b1515;">
+                           <children>
+                              <TableView fx:id="TableViewPermission" layoutX="2.0" layoutY="207.0" prefHeight="433.0" prefWidth="900.0">
+                                 <columns>
+                                    <TableColumn fx:id="IdPermisTab" prefWidth="49.0" text="ID" />
+                                    <TableColumn fx:id="DatePermisTab" prefWidth="97.0" text="Date" />
+                                    <TableColumn fx:id="NomPermisTab" prefWidth="133.0" text="Nom" />
+                                    <TableColumn fx:id="FonctPermisTab" prefWidth="107.0" text="Fonction" />
+                                    <TableColumn fx:id="PhonePermisTab" prefWidth="102.0" text="Numéro Tel" />
+                                    <TableColumn fx:id="DateRetourPermisTab" prefWidth="106.0" text="Date retour" />
+                                    <TableColumn fx:id="NbrJourPermisTab" prefWidth="71.0" text="Nbr Jours" />
+                                    <TableColumn fx:id="SoldeRestePermisTab" prefWidth="76.0" text="Solde reste" />
+                                    <TableColumn fx:id="ObservePermisTab" prefWidth="127.0" text="Observation" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="56.0" layoutY="42.0" text="Liste des pérmissions" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bell MT" size="43.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="BtnModifiePermis" layoutX="681.0" layoutY="655.0" mnemonicParsing="false" onAction="#BtnModifiePermis_click" prefHeight="39.0" prefWidth="154.0" style="-fx-background-radius: 0px 20px 20px 0px; -fx-border-radius: 0px 20px 20px 0px;" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Modifier" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="BtnSupprPermis" layoutX="513.0" layoutY="655.0" mnemonicParsing="false" onAction="#BtnSupprPermis_click" prefHeight="39.0" prefWidth="154.0" style="-fx-background-radius: 20px 0px 0px 20px; -fx-border-radius: 20px 0px 0px 20px;" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Supprimer" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="TextRechercherPermis" layoutX="56.0" layoutY="152.0" onAction="#TextRechercherPermis_click" prefHeight="36.0" prefWidth="339.0" promptText="Rechercher......" />
+                              <ImageView fx:id="ImagePermis" fitHeight="150.0" fitWidth="200.0" layoutX="613.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8_female_user_32.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="PanelCongesSabhatique" layoutX="-2.0" layoutY="1.0" prefHeight="710.0" prefWidth="930.0" style="-fx-background-color: #6b1515;">
+                           <children>
+                              <TableView fx:id="TableCongesSabhatique" layoutX="49.0" layoutY="218.0" prefHeight="324.0" prefWidth="846.0">
+                                <columns>
+                                  <TableColumn fx:id="ColonneIDCongesSAB" prefWidth="75.0" text="#ID" />
+                                  <TableColumn fx:id="ColonneNOMcongesSAB" prefWidth="144.0" text="Nom" />
+                                    <TableColumn fx:id="ColonnePRENOMcongesSAB" prefWidth="173.0" text="Prenom(s)" />
+                                    <TableColumn fx:id="ColonneDATEcongesSAB" prefWidth="177.0" text="Date début" />
+                                    <TableColumn fx:id="ColoneeDATEFINcongesSAB" prefWidth="236.0" text="Date Fin" />
+                                </columns>
+                              </TableView>
+                              <Label fx:id="labelquiVariee" layoutX="42.0" layoutY="57.0" text="Gestion du congé" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bell MT" size="43.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="49.0" layoutY="613.0" mnemonicParsing="false" onAction="#BtnActionListeCongesSabata" prefHeight="39.0" prefWidth="116.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Liste" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font></Button>
+                              <Pane fx:id="PanelPourListerEmployeSabata" layoutX="-4.0" layoutY="3.0" prefHeight="710.0" prefWidth="878.0" style="-fx-background-color: #6b1515;">
+                                 <children>
+                                    <Label layoutX="57.0" layoutY="66.0" text="Listes" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bell MT" size="60.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="TableauEmpMananaCongesSabathique" layoutX="12.0" layoutY="199.0" prefHeight="430.0" prefWidth="861.0">
+                                      <columns>
+                                        <TableColumn fx:id="ColIDsabata" prefWidth="52.0" text="#ID" />
+                                        <TableColumn fx:id="ColNOMsabata" prefWidth="185.0" text="Nom" />
+                                          <TableColumn fx:id="ColPRENOMSsabata" prefWidth="206.0" text="Prénom(s)" />
+                                          <TableColumn fx:id="ColFONCTIONsabata" prefWidth="219.0" text="Fonction" />
+                                          <TableColumn fx:id="ColTELsabata" prefWidth="192.0" text="Téléphone" />
+                                      </columns>
+                                    </TableView>
+                                    <ImageView fx:id="PhotoEmpSabata" fitHeight="129.0" fitWidth="166.0" layoutX="688.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button layoutX="382.0" layoutY="649.0" mnemonicParsing="false" onAction="#RecupererCongerSabata" prefHeight="42.0" prefWidth="122.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Récupérer" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="barreDeRecherche" layoutX="270.0" layoutY="149.0" prefHeight="38.0" prefWidth="403.0" promptText="Rechercher....." />
+                                 </children>
+                              </Pane>
+                              <ImageView fx:id="imageSabata" fitHeight="150.0" fitWidth="193.0" layoutX="700.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="imageSabata1" fitHeight="150.0" fitWidth="193.0" layoutX="59.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="motChercher" layoutX="513.0" layoutY="633.0" text="Recherche" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bell MT" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="BokotraAnnuler" layoutX="196.0" layoutY="614.0" mnemonicParsing="false" onAction="#BoutonAnnulerCsabata_click" prefHeight="38.0" prefWidth="122.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Annuler" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="bokotraRefresh" layoutX="343.0" layoutY="614.0" mnemonicParsing="false" onAction="#BoutonActionRafraichirTabSabata" prefHeight="38.0" prefWidth="99.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Rafraichir" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="bokotraImprimerCsabhatique" layoutX="49.0" layoutY="660.0" mnemonicParsing="false" onAction="#FonctionImprimerCONGEsabhatique" prefHeight="38.0" prefWidth="116.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Imprimer" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="rechercheEmpSabata" layoutX="45.0" layoutY="165.0" prefHeight="39.0" prefWidth="335.0" promptText="Rechercher....." />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="693.0" layoutY="-195.0" opacity="0.32" prefHeight="259.0" prefWidth="342.0" rotate="-36.9" style="-fx-background-color: #fffeed; -fx-background-radius: 30px;" stylesheets="@style.css" />
+      <Pane fx:id="PanelMavoValidationCsabata" layoutX="248.0" opacity="0.91" prefHeight="710.0" prefWidth="930.0" style="-fx-background-color: #6b1515;">
+         <children>
+            <TextField fx:id="TeFieldNomEmpCsabata" layoutX="158.0" layoutY="298.0" prefHeight="42.0" prefWidth="221.0" />
+            <TextField fx:id="TextFieldPrenomCsabata" layoutX="158.0" layoutY="415.0" prefHeight="42.0" prefWidth="221.0" />
+            <DatePicker fx:id="DateDebCsabata" layoutX="568.0" layoutY="298.0" prefHeight="42.0" prefWidth="217.0" />
+            <DatePicker fx:id="DateFINCsabata" layoutX="568.0" layoutY="415.0" prefHeight="42.0" prefWidth="217.0" />
+            <Button layoutX="394.0" layoutY="550.0" mnemonicParsing="false" onAction="#ActionBoutonValiderCongerSabata" prefHeight="42.0" prefWidth="128.0" styleClass="StyleStandartBoutton" stylesheets="@style.css" text="Valider" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="37.0" layoutY="300.0" text="Nom " textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="415.0" text="Prénom(s)" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="426.0" layoutY="303.0" text="Date début" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="434.0" layoutY="421.0" text="Date Fin" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="53.0" text="Récupération du" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="119.0" text="congé sabhatique" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="31.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="ImageEmpCongerSabata" fitHeight="150.0" fitWidth="199.0" layoutX="584.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <DatePicker fx:id="rechercheParDateDebut" layoutX="900.0" layoutY="631.0" onAction="#ActionDateSpecifique" prefHeight="36.0" prefWidth="217.0" />
+   </children>
+</AnchorPane>
